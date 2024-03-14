@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<!-- Top Image Section -->
+<section class="masthead">
+  <!-- Existing content for masthead -->
+</section>
+
+<!-- Blue Background Block with centered text -->
+<section id="blue-background" class="text-center py-3"> <!-- Reduced padding -->
+  <div class="container">
+    <h2 class="mb-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"</h2>
+  </div>
+</section>
+
+<!-- About Us Section with centered images and text -->
+<section id="about-us" class="pb-3"> <!-- Reduced padding -->
+  <div class="container">
+    <!-- Rows for images and text -->
+    <!-- Repeat this block for each image and text pair -->
+    <div class="row mb-3"> <!-- Reduced margin -->
+      <div class="col-12 text-center">
+        <img src='/static/main/about1.jpg' alt="Description of Image 1" class="img-fluid mb-2"> <!-- Reduced margin -->
+        <h3>Title for Image 1</h3>
+        <p>Description or additional text for image 1.</p>
+      </div>
+    </div>
+    <!-- More rows as needed... -->
+  </div>
+</section>
+
+{% endblock %}

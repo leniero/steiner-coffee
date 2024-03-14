@@ -1,0 +1,252 @@
+/* Custom styles for scaling elements */
+/* You will need to adjust the values based on your prototype */
+
+/* Reset padding and margins for all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: '3g5';
+    src: url('/static/main/3g5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'sfpro';
+    src: url('/static/main/SF-Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* Style the body */
+body {
+    font-family: 'sfpro', sans-serif; /* Example font */
+    background: #f8f9fa; /* Example background color */
+    color: #333; /* Example text color */
+    line-height: 1.6;
+    padding-top: 100px; 
+}
+
+.navbar {
+    background-color: #ffffff; /* Assuming prototype has a white navbar */
+    display: inline block;
+    border-bottom: 0.25px solid #828282; /* Adds a thin line at the bottom, change color as needed */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* This z-index is standard for Bootstrap navbars, but you can increase it if necessary */
+}
+
+/* Navbar links */
+.navbar a {
+    margin-right: 75px; /* Increase this value to add more space between the menu items */
+}
+
+/* Navbar SVG image styles */
+.nav-item img {
+    transform: scale(2.25); /* This will double the size of the images */
+    transform-origin: center; /* Ensures the scaling is centered */
+    margin-right: 100px; /* Increase this value to add more space between the menu items */
+
+}
+
+@media (max-width: 991px) {
+    .navbar a {
+    margin-right: 10px; /* Increase this value to add more space between the menu items */
+    }
+
+    .nav-item img {
+      /* transform: scale(0.5); Smaller images on mobile */
+      margin-right: 0;
+      margin-bottom: 0; /* Eliminate any margin below the navbar */
+      max-height: 50px; /* Reduce image size to decrease space */
+      width: 100%; /* Adjust width automatically */
+      height: 100%; /* Ensure the nav takes the full width */
+
+    }
+
+    .navbar-nav {
+        padding-left: 0; /* Reset padding if needed */
+        margin-bottom: 0; /* Eliminate any margin below the navbar */
+        width: 100%; /* Ensure the nav takes the full width */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0; /* Remove padding from nav-link if any */
+    }
+
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start; /* Align items to the start */
+        height: 100vh; /* Make navbar full height */
+        overflow-y: auto; /* Enable scrolling if content overflows */
+    }
+
+    .navbar-toggler {
+        position: center;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .navbar-nav .nav-item,
+    .navbar-nav .nav-link {
+        padding-top: 0.5rem; /* Reduce top padding */
+        padding-bottom: 0.5rem; /* Reduce bottom padding */
+        margin-bottom: 0; /* Eliminate margin between nav items */
+        display: block; /* Stack nav items */
+    }
+
+  }
+  
+
+
+
+.navbar-brand {
+    /* Adjust logo size */
+    /* padding: 10px 20px; Adjust the padding as per your design */
+    width: 300px; /* Adjust width as necessary */
+
+}
+
+/* Logo inside the navbar */
+.navbar-brand img {
+    height: 75px; /* Adjust height to match prototype */
+}
+
+/* Adjust navbar-brand padding and width on smaller screens */
+@media (max-width: 991px) {
+    .navbar-brand {
+      padding: 5px 10px; /* Reduce padding */
+      width: auto; /* Allow width to adjust naturally */
+    }
+
+  }
+
+/* Masthead styles */
+.masthead {
+    background-image: url('main/header.png');
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh; This will make it full screen height, adjust as needed */
+    color: #ffffff; /* Assuming the text is white */
+    height: 50vh;
+    object-fit: cover;
+    margin-top: 0; 
+    width: 100%;
+
+    margin-bottom: 50px; 
+
+    font-family: 'sfpro';
+    font-size: xx-large;
+
+
+}
+
+
+.masthead h1 {
+    font-size: 2.5rem; /* Adjust based on prototype */
+}
+
+.masthead p {
+    font-size: 1.5rem; /* Adjust based on prototype */
+}
+
+
+/* Content area */
+.row .col-md-4 h2 {
+    color: #333; /* Adjust based on prototype */
+    /* Add more styles as per prototype for headings */
+}
+
+.row .col-md-4 p {
+    color: #555; /* Adjust based on prototype */
+    /* Add more styles as per prototype for paragraphs */
+}
+
+/* Custom Button Styles */
+.btn-custom {
+    background-color: #ffffff; /* Replace with your actual color */
+    color: #ffffff; /* If you have white text */
+    border: none;
+    /* Add other styles like padding, font-size as per prototype */
+}
+
+/* Use the custom button class in your HTML replacing 'btn-secondary' with 'btn-custom' */
+
+
+/* About Us Section Styles */
+#about-us .row {
+    margin-bottom: 30px; /* Adds spacing between each row */
+}
+
+#about-us img {
+    max-width: 100%; /* Ensures images are not larger than their container */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 15px; /* Adds spacing between image and text */
+}
+
+#about-us h3 {
+    font-family: 'sfpro', sans-serif; /* Ensures consistent font */
+    font-size: 1.5rem; /* Adjust to match prototype */
+    color: #333; /* Example heading color */
+    margin-bottom: 10px; /* Adds spacing between heading and paragraph */
+}
+
+#about-us p {
+    font-family: 'sfpro', sans-serif; /* Ensures consistent font */
+    font-size: 1rem; /* Adjust to match prototype */
+    color: #555; /* Example paragraph color */
+    margin-bottom: 20px; /* Adds spacing below paragraph */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    #about-us .row {
+        margin-bottom: 20px; /* Less space between rows on small screens */
+    }
+
+    #about-us img {
+        margin-bottom: 10px; /* Less space between image and text on small screens */
+    }
+}
+
+/* Add additional styles or media queries as needed to match your prototype */
+
+/* ... (existing styles) ... */
+
+/* Blue Background Block */
+/* Ensure the blue background takes precedence */
+html body #blue-background {
+    background-color: #007bff !important; /* Use !important to ensure this rule takes precedence */
+    color: #ffffff !important; /* Use !important to ensure this rule takes precedence */
+    min-height: 150px; /* Ensuring a minimum height for visibility */
+}
+
+#blue-background h2 {
+    font-size: 2rem; /* Adjusted font size for the quote */
+    font-weight: bold; /* If you want the text to be bold */
+    margin-bottom: 0.5rem; /* Adjusted spacing below the heading */
+}
+
+/* Centered text and images for the about us section */
+#about-us h3, 
+#about-us p {
+    text-align: center; /* Center the text */
+}
+
+#about-us img {
+    display: block;
+    margin: 0 auto; /* Center images */
+    margin-bottom: 10px; /* Adjusted spacing between image and text */
+}
+
+/* ... (existing styles) ... */
+
