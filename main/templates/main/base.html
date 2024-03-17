@@ -24,11 +24,12 @@
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <img src="{% static 'main/nav-coll.svg' %}" alt="toggle navigation">
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
 
-        <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav w-100 justify-content-around">
             <li class="nav-item">
                 <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
                     <img src="{% static 'main/about.svg' %}" data-hover="{% static 'main/about up.svg' %}" alt="about us" id="about-link-image">
