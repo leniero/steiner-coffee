@@ -30,7 +30,7 @@ body {
     background: #f8f9fa; /* Example background color */
     color: #333; /* Example text color */
     line-height: 1.6;
-    padding-top: 100px; 
+    padding-top: 0; 
 }
 
 .navbar {
@@ -41,6 +41,9 @@ body {
     top: 0;
     width: 100%;
     z-index: 1030; /* This z-index is standard for Bootstrap navbars, but you can increase it if necessary */
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 /* Navbar links */
@@ -130,6 +133,10 @@ body {
 
   }
 
+  header.masthead {
+    margin-bottom: 0; /* Remove any margin at the bottom of the masthead */
+}
+
 /* Masthead styles */
 .masthead {
     background-image: url('main/header.png');
@@ -137,26 +144,49 @@ body {
     background-position: center;
     /* height: 100vh; This will make it full screen height, adjust as needed */
     color: #ffffff; /* Assuming the text is white */
-    height: 50vh;
+    height: auto;
+    min-height: 75vh;
     object-fit: cover;
     margin-top: 0; 
     width: 100%;
 
-    margin-bottom: 50px; 
+    margin-bottom: 0; 
 
     font-family: 'sfpro';
     font-size: xx-large;
 
+    padding: 0;
+    margin-bottom: 0;
+
+    display: grid;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text inside the flex item */
 
 }
 
-
 .masthead h1 {
     font-size: 2.5rem; /* Adjust based on prototype */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text inside the flex item */
+
 }
 
 .masthead p {
     font-size: 1.5rem; /* Adjust based on prototype */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text inside the flex item */
+
+}
+
+.masthead img {
+    margin-bottom: 0; /* Removes any bottom margin from images within the masthead */
+}
+
+.row {
+    margin-top: 50px; /* Adjust the value to your preference */
 }
 
 
@@ -225,15 +255,29 @@ body {
 /* Blue Background Block */
 /* Ensure the blue background takes precedence */
 html body #blue-background {
-    background-color: #007bff !important; /* Use !important to ensure this rule takes precedence */
-    color: #ffffff !important; /* Use !important to ensure this rule takes precedence */
-    min-height: 150px; /* Ensuring a minimum height for visibility */
+    background-color: #007bff !important; /* Blue background */
+    color: #ffffff !important; /* White text color */
+    min-height: 75vh;
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks flex items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text inside the flex item */
+    padding: 0; /* Adjust or remove padding as needed */
+    margin: 0; /* Adjust or remove margin as needed */
+
 }
 
+#blue-background .container {
+    margin-top: 0;
+}
+
+
 #blue-background h2 {
-    font-size: 2rem; /* Adjusted font size for the quote */
+    font-size: 4rem; /* Adjusted font size for the quote */
     font-weight: bold; /* If you want the text to be bold */
-    margin-bottom: 0.5rem; /* Adjusted spacing below the heading */
+    margin-bottom: 0; /* Adjusted spacing below the heading */
+    margin-top: 0;
 }
 
 /* Centered text and images for the about us section */
