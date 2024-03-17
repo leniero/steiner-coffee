@@ -1,4 +1,18 @@
 {% extends 'main/base.html' %}
+{% load static %}
+{% block header %}
+<!-- Masthead/Header -->
+<header class="masthead" style="background-image: url('{% static 'main/header-menu.jpg' %}')">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h1 class="font-weight-light">Welcome to Steiner Coffee House</h1>
+              <p class="lead">A great place to enjoy coffee and company.</p>
+          </div>
+      </div>
+  </div>
+</header>
+{% endblock header %}
 
 {% block content %}
 <div class="container">
