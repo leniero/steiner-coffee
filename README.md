@@ -52,5 +52,52 @@ Since a `requirements.txt` file was not detected, install Django using pip (Pyth
 - **Dependencies**
   This guide assumes Django is the primary dependency. If your project uses other external libraries, please ensure they are installed via pip or included in a `requirements.txt` file for easier setup.
 
+
+
+### Managing Static Deployment on GitHub Pages
+
+To host the Steiner Cafe website on GitHub Pages, you need to compile all static assets into a folder that GitHub Pages can serve directly. The following steps will guide you through creating a branch with the static files necessary for GitHub Pages deployment.
+
+1. **Collect Static Files**  
+   First, you need to collect all static files into a directory that will be committed to the repository. Run the following command:
+
+python manage.py collectstatic
+
+This will collect all static files into the `staticfiles` directory (or another directory if you've set `STATIC_ROOT` in your settings).
+
+2. **Create a New Branch for GitHub Pages**  
+Create a new branch that will contain only the files needed for the static site deployment. You can name this branch `gh-pages`:
+
+git checkout -b gh-pages
+
+3. **Remove Unnecessary Files**  
+In this new branch, delete all files and directories unrelated to the static deployment, including Python files, Django apps, etc. Leave only the static files and any HTML files you wish to serve.
+
+4. **Add and Commit Changes**  
+Add the remaining files to the Git index and commit them:
+
+git add -A
+git commit -m "Prepare static files for GitHub Pages"
+
+
+5. **Push to GitHub**  
+Push the new `gh-pages` branch to your GitHub repository:
+
+git push origin gh-pages
+
+
+6. **Configure GitHub Pages to Use the Branch**  
+Go to your repository settings on GitHub, navigate to the "Pages" section, and configure GitHub Pages to use the `gh-pages` branch. If you have a custom domain, configure it as well.
+
+7. **Verify the Deployment**  
+After pushing to GitHub, GitHub Pages will build and deploy your site. Verify that the site is up and running by accessing the provided GitHub Pages URL.
+
+Remember to keep the `gh-pages` branch updated with any changes you make to your static files.
+
+#### Note on Django and Static Files
+Since GitHub Pages only serves static files, you won't be able to use Django's dynamic features, such as database interactions or server-side processing. For full functionality, consider hosting on a platform that supports Python and Django, like Heroku or a similar service.
+
+
+
 #### Support
 For any questions or issues setting up the project locally, please reach out to the project maintainers or consult the Django documentation for more detailed instructions on working with Django projects.
