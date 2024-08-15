@@ -1,81 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steiner Coffee House</title>
-    {% load bootstrap4 %}
+    {% load bootstrap4 %} 
     {% bootstrap_css %}
     {% bootstrap_javascript jquery='full' %}
-    <link href="{% static 'main/styles.css' %}" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="icon" href="{% static 'main/favicon.png' %}" type="image/png">
+    <link href="{% static 'main/styles.css' %}" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="{% static 'main/images/favicon.png' %}"
+      type="image/png"
+    />
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Brand/logo -->
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img
+          src="{% static 'main/images/logo1.svg' %}"
+          id="animated-logo"
+          alt="Steiner Coffee House Logo"
+          class="img"
+        />
+      </a>
 
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <img
+          src="{% static 'main/images/nav-coll.svg' %}"
+          alt="toggle navigation"
+        />
+      </button>
 
-</head>
-<body>
-
-<!-- Navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'main/logo1.svg' %}" id="animated-logo" alt="Steiner Coffee House Logo" class="img">
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="{% static 'main/nav-coll.svg' %}" alt="toggle navigation">
-    </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-around">
-            <li class="nav-item">
-                <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
-                    <img src="{% static 'main/about.svg' %}" data-hover="{% static 'main/about up.svg' %}" alt="about us" id="about-link-image">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{% url 'menu' %}" class="{% if request.resolver_match.url_name == 'menu' %}active{% endif %}">
-                    <img src="{% static 'main/menu.svg' %}" data-hover="{% static 'main/menu up.svg' %}" alt="our menu" id="menu-link-image">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{% url 'events' %}" class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}">
-                    <img src="{% static 'main/events.svg' %}" data-hover="{% static 'main/events up.svg' %}" alt="events" id="events-link-image">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{% url 'membership' %}" class="{% if request.resolver_match.url_name == 'membership' %}active{% endif %}">
-                    <img src="{% static 'main/member.svg' %}" data-hover="{% static 'main/member up.svg' %}" alt="membership" id="member-link-image">
-                </a>
-            </li>        </ul>        
-    </div>
-</nav>
+          <li class="nav-item">
+            <a
+              href="{% url 'about' %}"
+              class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+            >
+              <img
+                src="{% static 'main/images/about.svg' %}"
+                data-hover="{% static 'main/images/about up.svg' %}"
+                alt="about us"
+                id="about-link-image"
+              />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="{% url 'menu' %}"
+              class="{% if request.resolver_match.url_name == 'menu' %}active{% endif %}"
+            >
+              <img
+                src="{% static 'main/images/menu.svg' %}"
+                data-hover="{% static 'main/images/menu up.svg' %}"
+                alt="our menu"
+                id="menu-link-image"
+              />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="{% url 'events' %}"
+              class="{% if request.resolver_match.url_name == 'events' %}active{% endif %}"
+            >
+              <img
+                src="{% static 'main/images/events.svg' %}"
+                data-hover="{% static 'main/images/events up.svg' %}"
+                alt="events"
+                id="events-link-image"
+              />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="{% url 'membership' %}"
+              class="{% if request.resolver_match.url_name == 'membership' %}active{% endif %}"
+            >
+              <img
+                src="{% static 'main/images/member.svg' %}"
+                data-hover="{% static 'main/images/member up.svg' %}"
+                alt="membership"
+                id="member-link-image"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-{% block header %}
-<!-- The default header content can go here if needed -->
-{% endblock header %}
-
-
-{% block content %}
-{% endblock content %}
-
-{% block javascript %}
-<script type="text/javascript">
-  // JavaScript for navigation bar and any other global scripts
-  var aboutImage = "{% static 'main/about.svg' %}";
-  var aboutHoverImage = "{% static 'main/about up.svg' %}";
-  var menuImage = "{% static 'main/menu.svg' %}";
-  var menuHoverImage = "{% static 'main/menu up.svg' %}";
-  var eventsImage = "{% static 'main/events.svg' %}";
-  var eventsHoverImage = "{% static 'main/events up.svg' %}";
-  var memberImage = "{% static 'main/member.svg' %}";
-  var memberHoverImage = "{% static 'main/member up.svg' %}";
-</script>
-<script src="{% static 'main/logo-animation.js' %}" type="text/javascript"></script>
-<script src="{% static 'main/nav-animation.js' %}" type="text/javascript"></script>
-{% endblock javascript %}
-
-</body>
+    {% block header %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block javascript %}
+    <script type="text/javascript">
+      const logos = [
+        "{% static 'main/images/logo1.svg' %}",
+        "{% static 'main/images/logo2.svg' %}",
+        "{% static 'main/images/logo3.svg' %}",
+        "{% static 'main/images/logo4.svg' %}",
+        "{% static 'main/images/logo5.svg' %}",
+        "{% static 'main/images/logo6.svg' %}",
+        "{% static 'main/images/logo7.svg' %}",
+        "{% static 'main/images/logo8.svg' %}",
+        "{% static 'main/images/logo9.svg' %}",
+        "{% static 'main/images/logo10.svg' %}",
+      ];
+    </script>
+    <script
+      src="{% static 'main/logo-animation.js' %}"
+      type="text/javascript"
+    ></script>
+    <script
+      src="{% static 'main/nav-animation.js' %}"
+      type="text/javascript"
+    ></script>
+    {% endblock javascript %}
+  </body>
 </html>

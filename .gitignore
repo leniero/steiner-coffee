@@ -1,0 +1,75 @@
+# Python files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pydis
+
+# Django specific
+*.log
+db.sqlite3
+/media
+/staticfiles
+
+# Django migrations
+*/migrations/*
+*.sqlite3
+
+# If you are using virtualenvs or Pipenv
+.env
+.venv/
+venv/
+ENV/
+env/
+Pipfile
+Pipfile.lock
+
+# If you are using the coverage package
+.coverage
+*.cover
+.hypothesis/
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+*.egg
+
+# Environments
+.env
+*.env
+*.env.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Ignore SQLite database
+db.sqlite3
+
+# Ignore compiled translations
+*.mo
+
+# Ignore static files
+/static/
+/media/
+/main/static/main/*
+
+# Ignore virtual environments
+venv/
+ENV/
+
+# Ignore npm and yarn dependencies
+node_modules/
+npm-debug.log
+yarn-error.log

@@ -1,38 +1,208 @@
-{% extends 'main/base.html' %}
-{% load static %}
-{% block header %}
-<!-- Masthead/Header -->
-<header class="masthead" style="background-image: url('{% static 'main/header-menu.jpg' %}')">
-  <div class="container h-100">
-      <div class="row h-100 align-items-center">
-          <div class="col-12 text-center">
-              {% comment %} <h1 class="font-weight-light">Welcome to Steiner Coffee House</h1>
-              <p class="lead">A great place to enjoy coffee and company.</p> {% endcomment %}
-          </div>
-      </div>
-  </div>
-</header>
-{% endblock header %}
+{% extends 'main/base.html' %} {% load static %}
 
-{% block content %}
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Our Coffee</h2>
-        <p>Discover the finest blends and single-origin coffees. We carefully source and roast every bean.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Our Menu</h2>
-        <p>From classic pastries to modern favourites, our menu has something for everyone.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Membership</h2>
-        <p>Join our community and enjoy special perks, events, and the joy of good coffee.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
+<head>
+  <link href="{% static 'main/menu.css' %}" rel="stylesheet" />
+</head>
+
+{% block header %}
+<header
+  class="masthead"
+  style="background-image: url('{% static 'main/images/header-menu.jpg' %}')"
+>
+  <!-- Header content -->
+</header>
+{% endblock header %} {% block content %}
+<div class="container my-5">
+  <!-- First Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-1.jpg' %}"
+        alt="Hähnchen-Sandwich mit Pesto und Eiskaffee. Gegrilltes Hähnchenfilet mit frischem Pesto, serviert auf einem knusprigen Baguette, begleitet von einem erfrischenden Eiskaffee."
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Hähnchen-Sandwich mit Pesto und Eiskaffee. Gegrilltes Hähnchenfilet mit
+        frischem Pesto, serviert auf einem knusprigen Baguette, begleitet von
+        einem erfrischenden Eiskaffee.
+      </h2>
     </div>
   </div>
-  {% endblock %}
+
+  <!-- Second Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Gemüse-Sandwich mit Tomaten und Sprossen. Ein leichtes und frisches
+        Sandwich mit saftigen Tomaten, Zwiebeln, Spinat und Sprossen, perfekt
+        für ein gesundes Mittagessen.
+      </h2>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-2.jpg' %}"
+        alt="Gemüse-Sandwich mit Tomaten und Sprossen. Ein leichtes und frisches Sandwich mit saftigen Tomaten, Zwiebeln, Spinat und Sprossen, perfekt für ein gesundes Mittagessen."
+        class="img-fluid"
+      />
+    </div>
+  </div>
+
+  <!-- Third Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-3.jpg' %}"
+        alt="Iced Latte. Ein kühles Getränk aus Espresso, Milch und Eiswürfeln – ideal für heiße Tage."
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Iced Latte. Ein kühles Getränk aus Espresso, Milch und Eiswürfeln –
+        ideal für heiße Tage.
+      </h2>
+    </div>
+  </div>
+
+  <!-- Fourth Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Beeren-Törtchen. Ein süßes Gebäck gefüllt mit einer Auswahl an frischen
+        Beeren und einer zarten Cremefüllung.
+      </h2>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-4.jpg' %}"
+        alt="Beeren-Törtchen. Ein süßes Gebäck gefüllt mit einer Auswahl an frischen Beeren und einer zarten Cremefüllung."
+        class="img-fluid"
+      />
+    </div>
+  </div>
+
+  <!-- Fifth Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-5.jpg' %}"
+        alt="Eier Benedikt auf Toast mit bunten Saucen. Pochierte Eier serviert auf geröstetem Brot, garniert mit einer Auswahl an farbenfrohen Saucen und essbaren Blüten."
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Eier Benedikt auf Toast mit bunten Saucen. Pochierte Eier serviert auf
+        geröstetem Brot, garniert mit einer Auswahl an farbenfrohen Saucen und
+        essbaren Blüten.
+      </h2>
+    </div>
+  </div>
+
+  <!-- Sixth Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Klassisches Croissant. Ein butterzartes, goldbraunes Croissant – perfekt
+        zum Frühstück oder als Snack zwischendurch.
+      </h2>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-7.jpg' %}"
+        alt="Klassisches Croissant. Ein butterzartes, goldbraunes Croissant – perfekt zum Frühstück oder als Snack zwischendurch."
+        class="img-fluid"
+      />
+    </div>
+  </div>
+
+  <!-- Seventh Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-9.jpg' %}"
+        alt="Bagel mit Frischkäse und Eiskaffee. Ein frischer Bagel, großzügig bestrichen mit cremigem Frischkäse, serviert mit einem kühlen Eiskaffee."
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Bagel mit Frischkäse und Eiskaffee. Ein frischer Bagel, großzügig
+        bestrichen mit cremigem Frischkäse, serviert mit einem kühlen Eiskaffee.
+      </h2>
+    </div>
+  </div>
+
+  <!-- Eighth Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Avocado-Toast mit Granatapfelkernen. Frisches Avocado-Toast mit Feta und
+        Granatapfelkernen, ideal für einen gesunden Start in den Tag.
+      </h2>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-10.jpg' %}"
+        alt="Avocado-Toast mit Granatapfelkernen. Frisches Avocado-Toast mit Feta und Granatapfelkernen, ideal für einen gesunden Start in den Tag."
+        class="img-fluid"
+      />
+    </div>
+  </div>
+
+  <!-- Ninth Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-11.jpg' %}"
+        alt="Bananenbrot. Ein saftiges Bananenbrot, perfekt als süßer Snack oder zum Frühstück."
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Bananenbrot. Ein saftiges Bananenbrot, perfekt als süßer Snack oder zum
+        Frühstück.
+      </h2>
+    </div>
+  </div>
+
+  <!-- Tenth Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Gegrilltes Gemüse-Panini. Ein herzhaftes Panini gefüllt mit gegrilltem
+        Gemüse, perfekt für ein leichtes Mittagessen.
+      </h2>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/menu-12.jpg' %}"
+        alt="Gegrilltes Gemüse-Panini. Ein herzhaftes Panini gefüllt mit gegrilltem Gemüse, perfekt für ein leichtes Mittagessen."
+        class="img-fluid"
+      />
+    </div>
+  </div>
+
+  <!-- Eleventh Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <img
+        <img
+        src="{% static 'main/images/menu-13.jpg' %}"
+        alt="Insalata Caprese. Eine klassische italienische Vorspeise mit frischen Tomaten, Mozzarella, Basilikum und einem Schuss Balsamico-Essig. Serviert mit knusprigem Baguette."
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        Insalata Caprese. Eine klassische italienische Vorspeise mit frischen
+        Tomaten, Mozzarella, Basilikum und einem Schuss Balsamico-Essig.
+        Serviert mit knusprigem Baguette.
+      </h2>
+    </div>
+  </div>
+</div>
+{% endblock content %}

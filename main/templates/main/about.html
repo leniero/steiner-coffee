@@ -1,43 +1,54 @@
 {% extends 'main/base.html' %}
 {% load static %}
+{% load i18n %}
+
+{% block extra_head %}
+<link href="{% static 'main/about.css' %}" rel="stylesheet" />
+{% endblock extra_head %}
+
 {% block header %}
-<!-- Masthead/Header -->
-<header class="masthead" style="background-image: url('{% static 'main/header-about.jpg' %}')">
-  <div class="container h-100">
-      <div class="row h-100 align-items-center">
-          <div class="col-12 text-center">
-              {% comment %} <h1 class="font-weight-light">Welcome to Steiner Coffee House</h1>
-              <p class="lead">A great place to enjoy coffee and company.</p> {% endcomment %}
-          </div>
-      </div>
-  </div>
+<header
+  class="masthead"
+  style="background-image: url('{% static 'main/images/header-about.jpg' %}')"
+>
+  <!-- Header content -->
 </header>
 {% endblock header %}
 
 {% block content %}
-
-
-<!-- Blue Background Block with centered text -->
-<section id="blue-background" class="text-center py-3"> <!-- Reduced padding -->
+<section id="blue-background" class="text-center py-3">
   <div class="container">
-    <h2 class="mb-2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"</h2>
+    <h2 class="mb-2">
+      {% trans "Unsere Mission ist es, die besten Kaffeespezialitäten mit einer freundlichen Atmosphäre zu bieten." %}
+    </h2>
   </div>
 </section>
 
-<!-- About Us Section with centered images and text -->
-<section id="about-us" class="pb-3"> <!-- Reduced padding -->
+<section id="about-us" class="pb-3">
   <div class="container">
-    <!-- Rows for images and text -->
-    <!-- Repeat this block for each image and text pair -->
-    <div class="row mb-3"> <!-- Reduced margin -->
+    <div class="row mb-3">
       <div class="col-12 text-center">
-        <img src='/static/main/about1.jpg' alt="Description of Image 1" class="img-fluid mb-2"> <!-- Reduced margin -->
-        <h3>Title for Image 1</h3>
-        <p>Description or additional text for image 1.</p>
+        <img
+          src="{% static 'main/images/about1.jpg' %}"
+          alt="{% trans 'Unser Café' %}"
+          class="img-fluid mb-2"
+        />
+        <h3>{% trans "Eine Tasse Kaffee mit Herz" %}</h3>
+        <p>{% trans "Bei uns steht nicht nur der Kaffee im Mittelpunkt, sondern auch das Herz, das in jede Tasse fließt." %}</p>
       </div>
     </div>
-    <!-- More rows as needed... -->
+
+    <div class="row mb-3">
+      <div class="col-12 text-center">
+        <img
+          src="{% static 'main/images/about-2.jpg' %}"
+          alt="{% trans 'Gemütliches Ambiente' %}"
+          class="img-fluid mb-2"
+        />
+        <h3>{% trans "Gemütliches Ambiente" %}</h3>
+        <p>{% trans "Unser Café bietet eine warme und einladende Atmosphäre, in der sich jeder Gast wohlfühlt." %}</p>
+      </div>
+    </div>
   </div>
 </section>
-
-{% endblock %}
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block header_section %}
+<!-- Custom Header Section -->
+<div class="hero-section" style="background-image: url('{% static 'header.png' %}');">
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h1 class="header-title">
+                {% trans "Willkommen bei Steiner Kaffeehaus" %}
+            </h1>
+            <p class="sub-text">
+                {% trans "Ein großartiger Ort, um Kaffee und Gesellschaft zu genießen." %}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock header_section %}
+
+{% block content_section %}
+<div class="main-container">
+    <!-- Information Section -->
+    <div class="info-section">
+        <div class="info-box">
+            <h2>{% trans "Unser Kaffee" %}</h2>
+            <p>
+                {% trans "Entdecken Sie die besten Mischungen und Einzelherkunftskaffees. Wir beziehen und rösten jede Bohne sorgfältig." %}
+            </p>
+            <a class="btn-link" href="#">{% trans "Details ansehen »" %}</a>
+        </div>
+        <div class="info-box">
+            <h2>{% trans "Unser Menü" %}</h2>
+            <p>
+                {% trans "Von klassischen Backwaren bis hin zu modernen Favoriten – unser Menü bietet für jeden etwas." %}
+            </p>
+            <a class="btn-link" href="#">{% trans "Details ansehen »" %}</a>
+        </div>
+        <div class="info-box">
+            <h2>{% trans "Mitgliedschaft" %}</h2>
+            <p>
+                {% trans "Treten Sie unserer Gemeinschaft bei und genießen Sie besondere Vorteile, Veranstaltungen und die Freude am guten Kaffee." %}
+            </p>
+            <a class="btn-link" href="#">{% trans "Details ansehen »" %}</a>
+        </div>
+    </div>
+</div>
+{% endblock content_section %}

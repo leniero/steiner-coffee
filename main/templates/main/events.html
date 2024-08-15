@@ -1,38 +1,72 @@
-{% extends 'main/base.html' %}
-{% load static %}
-{% block header %}
-<!-- Masthead/Header -->
-<header class="masthead" style="background-image: url('{% static 'main/header-events.jpg' %}')">
-  <div class="container h-100">
-      <div class="row h-100 align-items-center">
-          <div class="col-12 text-center">
-              {% comment %} <h1 class="font-weight-light">Welcome to Steiner Coffee House</h1>
-              <p class="lead">A great place to enjoy coffee and company.</p> {% endcomment %}
-          </div>
-      </div>
-  </div>
-</header>
-{% endblock header %}
+{% extends 'main/base.html' %} {% load static %} {% load i18n %}
 
-{% block content %}
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Our Coffee</h2>
-        <p>Discover the finest blends and single-origin coffees. We carefully source and roast every bean.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Our Menu</h2>
-        <p>From classic pastries to modern favourites, our menu has something for everyone.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Membership</h2>
-        <p>Join our community and enjoy special perks, events, and the joy of good coffee.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
+<head>
+  <link href="{% static 'main/events.css' %}" rel="stylesheet" />
+</head>
+
+{% block header %}
+<header
+  class="masthead"
+  style="background-image: url('{% static 'main/images/header-events.jpg' %}')"
+>
+  <!-- Header content -->
+</header>
+{% endblock header %} {% block content %}
+<div class="container my-5">
+  <!-- First Row -->
+  <div class="row mb-5">
+    <div
+      class="col-md-6 d-flex align-items-center justify-content-center"
+      style="background-color: #f8f9fa"
+    >
+      <h2 style="color: #2ecc71">
+        {% trans "Live-Musik-Abende, jeden Freitag ab 19:00 Uhr" %}
+      </h2>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/event-1.jpg' %}"
+        alt="{% trans 'Live-Musik' %}"
+        class="img-fluid"
+      />
     </div>
   </div>
-  {% endblock %}
+
+  <!-- Second Row -->
+  <div id="orange-block" class="row mb-5" style="background-color: #ff5733">
+    <div
+      class="col-md-6 order-md-2 d-flex align-items-center justify-content-center"
+    >
+      <h2 style="color: white">
+        {% trans "Kaffee-Workshops, monatlich am Samstag" %}
+      </h2>
+    </div>
+    <div class="col-md-6 order-md-1">
+      <img
+        src="{% static 'main/images/event-2.jpg' %}"
+        alt="{% trans 'Kaffee-Workshops' %}"
+        class="img-fluid"
+      />
+    </div>
+  </div>
+
+  <!-- Third Row -->
+  <div class="row mb-5">
+    <div
+      class="col-md-6 d-flex align-items-center justify-content-center"
+      style="background-color: #f8f9fa"
+    >
+      <h2 style="color: #c0392b">
+        {% trans "Kunst- und Handwerksmarkt, jeden ersten Sonntag im Monat" %}
+      </h2>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/event-3.jpg' %}"
+        alt="{% trans 'Kunstmarkt' %}"
+        class="img-fluid"
+      />
+    </div>
+  </div>
+</div>
+{% endblock content %}
