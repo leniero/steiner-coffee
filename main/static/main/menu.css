@@ -1,0 +1,7 @@
+/* Menu Page Specific Styles */
+.row .col-md-6 h2 {
+    font-size: 3rem;
+    color: #2d2d8b;
+    text-align: center;
+    margin: 0;
+}

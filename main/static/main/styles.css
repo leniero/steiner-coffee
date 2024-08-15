@@ -129,6 +129,7 @@ header.masthead {
     margin-bottom: 0;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
     height: auto;
     min-height: 75vh;

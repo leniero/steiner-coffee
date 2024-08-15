@@ -1,17 +1,21 @@
-{% extends 'main/base.html' %} {% load static %} {% load i18n %}
+{% extends 'main/base.html' %}
+{% load static %}
+{% load i18n %}
 
-<head>
-  <link href="{% static 'main/events.css' %}" rel="stylesheet" />
-</head>
+{% block extra_head %}
+<link href="{% static 'main/events.css' %}" rel="stylesheet" />
+{% endblock extra_head %}
 
-{% block header %}
+{% block header_section %}
 <header
   class="masthead"
   style="background-image: url('{% static 'main/images/header-events.jpg' %}')"
 >
   <!-- Header content -->
 </header>
-{% endblock header %} {% block content %}
+{% endblock header_section %}
+
+{% block content_section %}
 <div class="container my-5">
   <!-- First Row -->
   <div class="row mb-5">
@@ -69,4 +73,4 @@
     </div>
   </div>
 </div>
-{% endblock content %}
+{% endblock content_section %}

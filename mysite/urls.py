@@ -1,10 +1,7 @@
-from django.urls import path
-from main import views
+from django.contrib import admin
+from django.urls import path, include  # Include is necessary to include urls from other apps
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('about/', views.about, name='about'),
-    path('menu/', views.menu, name='menu'),
-    path('events/', views.events, name='events'),
-    path('membership/', views.membership, name='membership'),
+    path('admin/', admin.site.urls),  # Admin site
+    path('', include('main.urls')),  # Include the URLs from the 'main' app
 ]

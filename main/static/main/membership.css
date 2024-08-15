@@ -1,0 +1,39 @@
+/* Membership Page Specific Styles */
+#green-background {
+    background-color: #2ecc71 !important;
+    color: #ffffff !important;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+#green-background .overlay-text-green {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 80%;
+}
+
+#orange-block {
+    height: 100vh;
+    background-color: #ff5733;
+}
+
+#orange-block .col-md-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

@@ -1,0 +1,74 @@
+/* About Us Section Styles */
+#about-us .row {
+    margin-bottom: 30px;
+}
+
+#about-us img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#about-us h3 {
+    font-family: 'sfpro', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#about-us p {
+    font-family: 'sfpro', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    #about-us .row {
+        margin-bottom: 20px;
+    }
+
+    #about-us img {
+        margin-bottom: 10px;
+    }
+}
+
+/* Blue Background Block */
+#blue-background {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+    /* Ensure there's enough padding */
+    margin: 0;
+    width: 100%;
+    background: #007bff;
+    /* Set a solid blue background */
+    z-index: 1;
+    /* Ensure it's above any other elements */
+    position: relative;
+}
+
+#blue-background .container {
+    width: 100%;
+    padding: 0;
+    /* Remove padding from the container */
+    margin: 0;
+    /* Remove margin from the container */
+}
+
+#blue-background h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    /* Ensure no extra margin is added to the heading */
+    padding: 0;
+    /* Ensure no extra padding is added to the heading */
+    z-index: 2;
+    /* Ensure text is above the background */
+    position: relative;
+}

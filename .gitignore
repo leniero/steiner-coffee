@@ -60,10 +60,6 @@ db.sqlite3
 # Ignore compiled translations
 *.mo
 
-# Ignore static files
-/static/
-/media/
-/main/static/main/*
 
 # Ignore virtual environments
 venv/
