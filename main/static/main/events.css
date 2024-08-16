@@ -1,7 +1,21 @@
 /* Event Page Specific Styles */
 #orange-block {
-    height: 60vh;
-    background-color: #ff5733;
+    background-color: rgba(236, 58, 148, 1) !important;
+    color: white;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 120%;
+    /* Use 100% width */
+    position: relative;
+    padding: 3rem 0;
+    margin: 0;
+    left: 50%;
+    /* Center alignment */
+    transform: translateX(-50%);
+    /* Center alignment */
 }
 
 #orange-block .col-md-6 {
@@ -9,12 +23,89 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    padding: 0;
 }
 
 /* Text styles for events */
 .row .col-md-6 h2 {
     font-size: 3rem;
-    color: #c0392b;
+    color: white;
     text-align: center;
     margin: 0;
+    font-weight: bold;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* Additional Styles to Ensure Full-Width */
+body,
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.site-footer h4 {
+    font-size: 1.5rem;
+    color: rgba(236, 58, 148, 1);
+    margin-bottom: 20px;
+}
+
+.site-footer .footer-links a:hover {
+    color: rgba(236, 58, 148, 1)
+}
+
+
+/* Blue Background Block */
+#blue-background {
+    background-color: #00A327;
+    color: #ffffff !important;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 10rem;
+}
+
+#blue-background .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#blue-background h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 0rem;
+    padding: 0;
+    z-index: 2;
+    position: relative;
+}
+
+/* Apply the 50Fonts2 font permanently */
+.permanent-50Fonts2 {
+    font-family: '50Fonts2', sans-serif;
+    font-size: 5.5rem;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: rgba(251, 110, 47, 1);
+    line-height: 1;
+}
+
+.img-fluid-big {
+    width: 130%;
+    height: auto;
+    object-fit: cover;
+    margin-top: -3rem;
+    margin-bottom: -3rem;
 }

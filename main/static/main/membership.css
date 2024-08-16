@@ -1,34 +1,36 @@
-/* Membership Page Specific Styles */
 #green-background {
-    background-color: #2ecc71 !important;
+    background-color: #EC3A94 !important;
     color: #ffffff !important;
-    min-height: 75vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 3rem 0;
+    padding: 0;
     margin: 0;
-    width: 100%;
+    width: 100vw;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 0;
+    /* Ensure no border or padding is at the bottom */
 }
 
-#green-background .overlay-text-green {
-    font-size: 4rem;
+#green-background h2 {
+    font-size: 3.5rem;
     font-weight: bold;
+    padding: 0;
+    z-index: 1;
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-    width: 80%;
 }
 
 #orange-block {
-    height: 100vh;
-    background-color: #ff5733;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* Ensure it's positioned relative to prevent gaps */
+    border-top: 0;
+    /* Ensure no border or padding is at the top */
 }
 
 #orange-block .col-md-6 {
@@ -36,4 +38,57 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+#orange-block h2 {
+    color: #00A327;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    width: 60%;
+    top: -5rem;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay-text-red {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0;
+    z-index: 1;
+    margin-top: -3rem;
+    margin-left: 3rem;
+    color: #ffffff;
+    margin-right: 3rem;
+}
+
+
+.site-footer h4 {
+    font-size: 1.5rem;
+    color: #00A327;
+    margin-bottom: 20px;
+}
+
+.site-footer .footer-links a:hover {
+    color: #00A327;
+}
+
+/* Apply the 50Fonts2 font permanently */
+.permanent-50Fonts2 {
+    font-family: '50Fonts2', sans-serif;
+    font-size: 5.5rem;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: rgba(251, 110, 47, 1);
+    line-height: 1;
 }

@@ -16,11 +16,16 @@
 {% endblock header_section %}
 
 {% block content_section %}
-<div id="membership-page" class="container my-5">
-  <!-- Green Background Block -->
+  <!-- Pink Background Block -->
   <section id="green-background" class="text-center">
-    <h2 class="overlay-text-green">
-      {% trans "Werden Sie Mitglied und genießen Sie exklusive Vorteile." %}
+ <h2 class="mb-2">
+      {% trans "Werden Sie Mitglied und genießen Sie" %}
+      <span class="permanent-50Fonts2" style="color: #00A327;">
+        {% trans "exklusive" %}
+      </span>
+      <span class="permanent-50Fonts2" style="color: #2d2d8b;">
+        {% trans "Vorteile." %}
+      </span>
     </h2>
   </section>
 
@@ -28,7 +33,7 @@
   <div class="col-md-12">
     <img src="{% static 'main/images/membership-1.jpg' %}" alt="{% trans "Mitgliedsvorteile" %}" class="img-fluid" />
   </div>
-
+  <section id="orange-block">
   <!-- Orange Background Block -->
   <div class="row mb-5 align-items-center" id="orange-block">
     <div class="col-md-6">
@@ -42,5 +47,4 @@
       </h2>
     </div>
   </div>
-</div>
 {% endblock content_section %}

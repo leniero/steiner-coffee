@@ -1,24 +1,31 @@
 /* About Us Section Styles */
 #about-us .row {
-    margin-bottom: 30px;
+    margin-bottom: 0rem !important;
+}
+
+#about-us .row:last-of-type {
+    margin-top: 4rem !important;
+    /* Adjust this value to increase or decrease the space */
 }
 
 #about-us img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
-#about-us h3 {
+
+#about-us h2.about-text-title {
     font-family: 'sfpro', sans-serif;
-    font-size: 1.5rem;
+    font-size: 25rem !important;
+    font-weight: bold;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: -100rem;
 }
 
-#about-us p {
+#about-us .rowp.about-text {
     font-family: 'sfpro', sans-serif;
-    font-size: 1rem;
+    font-size: 10rem;
     color: #555;
     margin-bottom: 20px;
 }
@@ -35,40 +42,181 @@
 
 /* Blue Background Block */
 #blue-background {
-    background-color: #007bff !important;
+    background-color: #03B2EF;
     color: #ffffff !important;
-    min-height: 75vh;
+    min-height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 3rem 0;
-    /* Ensure there's enough padding */
     margin: 0;
     width: 100%;
-    background: #007bff;
-    /* Set a solid blue background */
     z-index: 1;
-    /* Ensure it's above any other elements */
     position: relative;
+    padding-bottom: 10rem;
 }
 
 #blue-background .container {
     width: 100%;
     padding: 0;
-    /* Remove padding from the container */
     margin: 0;
-    /* Remove margin from the container */
 }
 
 #blue-background h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin: 0;
-    /* Ensure no extra margin is added to the heading */
+    margin-top: -5rem;
     padding: 0;
-    /* Ensure no extra padding is added to the heading */
     z-index: 2;
-    /* Ensure text is above the background */
     position: relative;
+}
+
+/* Apply the 50Fonts2 font permanently */
+.permanent-50Fonts2 {
+    font-family: '50Fonts2', sans-serif;
+    font-size: 5.5rem;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: rgba(251, 110, 47, 1);
+    line-height: 1;
+}
+
+/* .permanent-50Fonts2:hover {
+    color: #00A327;
+    text-transform: lowercase;
+    line-height: 1;
+} */
+
+/* Style for Image 1 to be centered and overlap with the blue section */
+.about-img {
+    position: relative;
+    left: 33%;
+    transform: translateX(-50%);
+    width: 66%;
+    top: -150px;
+    /* Adjust as necessary to control overlap */
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the main text (first text block) */
+.about-text-title-main {
+    font-family: 'sfpro', sans-serif;
+    font-size: 35rem;
+    font-weight: bold;
+    color: rgba(251, 110, 47, 1);
+    text-align: center;
+    margin-top: -2rem;
+    /* Move text closer to the element above */
+    margin-bottom: 1rem;
+    /* Reduce space below the text */
+}
+
+.about-text-main {
+    font-family: 'sfpro', sans-serif;
+    font-size: 20rem;
+    color: #2d2d8b;
+    text-align: center;
+    margin-bottom: 6rem;
+    font-weight: bold;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+
+/* Style for the second image to be aligned left with text on the right */
+.about-img-left {
+    margin-top: 12rem;
+    width: 100%;
+    /* Full width of its column */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow for a floating effect */
+}
+
+/* Styles for the secondary text (second text block) */
+/* Style for the image on the right and text on the left */
+.about-img-right {
+    margin-top: 12rem;
+    width: 100%;
+    /* Full width of its column */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow for a floating effect */
+}
+
+.about-text-title-secondary {
+    font-family: 'sfpro', sans-serif;
+    font-size: 25rem;
+    /* Smaller font size for differentiation */
+    font-weight: bold;
+    color: rgba(3, 178, 239, 1) !important;
+    text-align: left;
+    /* Align to the left */
+}
+
+.about-text-secondary {
+    font-family: 'sfpro', sans-serif;
+    font-size: 20rem;
+    color: #2d2d8b;
+    /* Slightly lighter color for contrast */
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.about-text-secondary p {
+
+    font-size: 20rem;
+
+}
+
+#about-us .row mb5 {
+    margin-bottom: 0rem !important;
+}
+
+#about-us .row p.about-text {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    color: #2d2d8b !important;
+}
+
+#about-us .row p.about-text,
+h2 {
+    text-align: center !important;
+    line-height: 1.2 !important;
+
+}
+
+#about-us .row h2 {
+    color: rgba(251, 110, 47, 1) !important;
+    line-height: 1.2 !important;
+    font-weight: bold;
+    font-size: 2rem !important;
+
+}
+
+/* Style for the large centered image */
+.large-centered-img {
+    width: 87%;
+    /* Adjust the width as needed */
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem !important;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* Optional: Add a subtle shadow for a floating effect */
+}
+
+.site-footer h4 {
+    font-size: 1.5rem;
+    color: rgba(251, 110, 47, 1);
+    margin-bottom: 20px;
+}
+
+.site-footer .footer-links a:hover {
+    color: rgba(251, 110, 47, 1);
 }

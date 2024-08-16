@@ -14,8 +14,18 @@
   <!-- Header content -->
 </header>
 {% endblock header_section %}
-
 {% block content_section %}
+  <section id="blue-background" class="text-center py-3">
+  <div class="container">
+<h2 class="mb-2">
+      Erleben Sie einzigartige Veranstaltungen wie 
+      <span class="permanent-50Fonts2" style="color: rgba(236, 58, 148, 1);">Live-Musik</span>
+      und 
+      <span class="permanent-50Fonts2" style="color: #2d2d8b;">Kaffee-Workshops</span>.
+    </h2>
+  </div>
+</section>
+
 <div class="container my-5">
   <!-- First Row -->
   <div class="row mb-5">
@@ -23,7 +33,7 @@
       class="col-md-6 d-flex align-items-center justify-content-center"
       style="background-color: #f8f9fa"
     >
-      <h2 style="color: #2ecc71">
+      <h2 style="color: #00A327">
         {% trans "Live-Musik-Abende, jeden Freitag ab 19:00 Uhr" %}
       </h2>
     </div>
@@ -31,13 +41,13 @@
       <img
         src="{% static 'main/images/event-1.jpg' %}"
         alt="{% trans 'Live-Musik' %}"
-        class="img-fluid"
+        class="img-fluid-big"
       />
     </div>
   </div>
 
   <!-- Second Row -->
-  <div id="orange-block" class="row mb-5" style="background-color: #ff5733">
+  <div id="orange-block" class="row mb-5" style="background-color: #FB6E2F">
     <div
       class="col-md-6 order-md-2 d-flex align-items-center justify-content-center"
     >
@@ -60,7 +70,7 @@
       class="col-md-6 d-flex align-items-center justify-content-center"
       style="background-color: #f8f9fa"
     >
-      <h2 style="color: #c0392b">
+      <h2 style="color: rgba(236, 58, 148, 1)">
         {% trans "Kunst- und Handwerksmarkt, jeden ersten Sonntag im Monat" %}
       </h2>
     </div>
@@ -68,7 +78,7 @@
       <img
         src="{% static 'main/images/event-3.jpg' %}"
         alt="{% trans 'Kunstmarkt' %}"
-        class="img-fluid"
+        class="img-fluid-big"
       />
     </div>
   </div>

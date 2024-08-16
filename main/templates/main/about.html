@@ -19,36 +19,72 @@
 <section id="blue-background" class="text-center py-3">
   <div class="container">
     <h2 class="mb-2">
-      {% trans "Unsere Mission ist es, die besten Kaffeespezialitäten mit einer freundlichen Atmosphäre zu bieten." %}
+      Unsere Mission ist es, die besten Kaffeespezialitäten mit einer 
+      <span class="permanent-50Fonts2" style="color: rgba(251, 110, 47, 1);">freundlichen</span>
+      <span class="permanent-50Fonts2" style="color: #2d2d8b;">Atmosphäre</span> 
+      zu bieten.
     </h2>
   </div>
 </section>
 
 <section id="about-us" class="pb-3">
   <div class="container">
-    <div class="row mb-3">
+    <!-- Keep the about-1 section unchanged -->
+    <div class="row mb-3 position-relative">
       <div class="col-12 text-center">
         <img
           src="{% static 'main/images/about1.jpg' %}"
           alt="{% trans 'Unser Café' %}"
-          class="img-fluid mb-2"
+          class="img-fluid mb-2 about-img"
         />
-        <h3>{% trans "Eine Tasse Kaffee mit Herz" %}</h3>
-        <p>{% trans "Bei uns steht nicht nur der Kaffee im Mittelpunkt, sondern auch das Herz, das in jede Tasse fließt." %}</p>
       </div>
     </div>
-
-    <div class="row mb-3">
-      <div class="col-12 text-center">
-        <img
-          src="{% static 'main/images/about-2.jpg' %}"
-          alt="{% trans 'Gemütliches Ambiente' %}"
-          class="img-fluid mb-2"
-        />
-        <h3>{% trans "Gemütliches Ambiente" %}</h3>
-        <p>{% trans "Unser Café bietet eine warme und einladende Atmosphäre, in der sich jeder Gast wohlfühlt." %}</p>
-      </div>
+ <!-- Second Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        {% trans "Gemütliches Ambiente" %}
+      </h2>
+      <p class="about-text" style="color: #555;">
+        {% trans "Unser Café bietet eine warme und einladende Atmosphäre, in der sich jeder Gast wohlfühlt." %}
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/about-3.jpg' %}"
+        alt="{% trans 'Unser Café' %}"
+        class="img-fluid"
+      />
     </div>
   </div>
-</section>
+
+  <!-- Third Row -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <img
+        src="{% static 'main/images/about-2.jpg' %}"
+        alt="{% trans 'Eine Tasse Kaffee mit Herz' %}"
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2 style="color: #2d2d8b">
+        {% trans "Eine Tasse Kaffee mit Herz" %}
+      </h2>
+      <p class="about-text" style="color: #555;">
+        {% trans "Bei uns steht nicht nur der Kaffee im Mittelpunkt, sondern auch das Herz, das in jede Tasse fließt." %}
+      </p>
+    </div>
+  </div>
+</div>
+<!-- New row for the big centered image -->
+<div class="row mb-5">
+    <div class="col-12 text-center">
+        <img
+          src="{% static 'main/images/map.jpg' %}" 
+          alt="{% trans 'Location Map' %}"
+          class="img-fluid large-centered-img"
+        />
+    </div>
+</div>
 {% endblock content_section %}

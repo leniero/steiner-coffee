@@ -10,9 +10,9 @@
             <h1 class="header-title">
                 {% trans "Willkommen bei Steiner Kaffeehaus" %}
             </h1>
-            <p class="sub-text">
+            {% comment %} <p class="sub-text">
                 {% trans "Ein großartiger Ort, um Kaffee und Gesellschaft zu genießen." %}
-            </p>
+            </p> {% endcomment %}
         </div>
     </div>
 </header>
@@ -22,26 +22,30 @@
 <div class="main-container">
     <!-- Information Section -->
     <div class="info-section">
-        <div class="info-box">
-            <h2>{% trans "Unser Kaffee" %}</h2>
-            <p>
-                {% trans "Entdecken Sie die besten Mischungen und Einzelherkunftskaffees. Wir beziehen und rösten jede Bohne sorgfältig." %}
-            </p>
-            <a class="btn-link" href="#">{% trans "Details ansehen »" %}</a>
-        </div>
-        <div class="info-box">
+
+
+        <div class="info-box-menu">
             <h2>{% trans "Unser Menü" %}</h2>
             <p>
                 {% trans "Von klassischen Backwaren bis hin zu modernen Favoriten – unser Menü bietet für jeden etwas." %}
             </p>
-            <a class="btn-link" href="#">{% trans "Details ansehen »" %}</a>
+            <a class="btn-link-menu" href="{% url 'menu' %}">{% trans "Details ansehen »" %}</a>
         </div>
-        <div class="info-box">
+                <!-- Updated Event Information Box -->
+        <div class="info-box-events">
+            <h2>{% trans "Unsere Veranstaltungen" %}</h2>
+            <p>
+                {% trans "Erleben Sie bei uns Live-Musik, Kaffee-Workshops und andere spannende Events. Sehen Sie sich unsere aktuellen Veranstaltungen an und planen Sie Ihren Besuch." %}
+            </p>
+            <a class="btn-link-events" href="{% url 'events' %}">{% trans "Details ansehen »" %}</a>
+        </div>
+
+        <div class="info-box-membership">
             <h2>{% trans "Mitgliedschaft" %}</h2>
             <p>
                 {% trans "Treten Sie unserer Gemeinschaft bei und genießen Sie besondere Vorteile, Veranstaltungen und die Freude am guten Kaffee." %}
             </p>
-            <a class="btn-link" href="#">{% trans "Details ansehen »" %}</a>
+            <a class="btn-link-membership" href="{% url 'membership' %}">{% trans "Details ansehen »" %}</a>
         </div>
     </div>
 </div>

@@ -1,7 +1,76 @@
 /* Menu Page Specific Styles */
 .row .col-md-6 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #2d2d8b;
     text-align: center;
     margin: 0;
 }
+
+/* Styling for menu item names */
+.menu-item-name {
+    color: #00A327;
+    font-weight: bold;
+}
+
+.site-footer h4 {
+    font-size: 1.5rem;
+    color: #00A327;
+    margin-bottom: 20px;
+}
+
+.site-footer .footer-links a:hover {
+    color: #00A327;
+}
+
+
+/* Blue Background Block */
+#blue-background {
+    background-color: rgba(251, 110, 47, 1);
+    color: #ffffff !important;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 10rem;
+}
+
+#blue-background .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#blue-background h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 0rem;
+    padding: 0;
+    z-index: 2;
+    position: relative;
+}
+
+/* Apply the 50Fonts2 font permanently */
+.permanent-50Fonts2 {
+    font-family: '50Fonts2', sans-serif;
+    font-size: 5.5rem;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: rgba(251, 110, 47, 1);
+    line-height: 1;
+
+}
+
+/* .permanent-50Fonts2:hover {
+    color: #00A327;
+    text-transform: lowercase;
+    line-height: 1;
+} */
